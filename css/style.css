@@ -365,6 +365,24 @@ template {
   font-style: normal;
 }
 
+.button {
+  padding: 17px 30px;
+  font-size: 13px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffd200;
+}
+
+.button:hover {
+  background-color: #ffdb33;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
 .header-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,8 +396,18 @@ template {
   padding: 8px 0;
 }
 
+.header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header-text__contacts {
   text-align: right;
+  margin-right: 30px;
 }
 
 .header-text__city {

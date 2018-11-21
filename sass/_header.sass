@@ -5,8 +5,11 @@
     align-items: center
     padding: 8px 0
   &-text 
+    display: flex
+    align-items: center
     &__contacts
       text-align: right
+      margin-right: 30px
     &__city
       display: block
       font-size: 13px
@@ -15,5 +18,5 @@
       display: block
       text-decoration: none
       color: $text-color
-      font-family: 'Museo Sans Bold', sans-serif
+      +bold
       font-size: 20px
