@@ -383,6 +383,13 @@ template {
   outline: none;
 }
 
+.input {
+  font-size: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+}
+
 .header-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -501,6 +508,90 @@ template {
 
 .main-advantages__img-3 {
   background-image: url("../img/main/paint-board.png");
+}
+
+.feedback {
+  padding: 94px 0;
+  background: url("../img/feedback/feedback-bg.jpg") no-repeat center right -40%;
+}
+
+.form {
+  max-width: 575px;
+}
+
+.form__title {
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  line-height: 35px;
+  margin-bottom: 45px;
+}
+
+.form__subtitle {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.form__input {
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+.form__input:first-child {
+  margin-right: 30px;
+}
+
+.form__button {
+  padding: 28px;
+  margin-bottom: 33px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__manager {
+  margin-right: 78px;
+  max-width: 227px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form__callback {
+  max-width: 300px;
+}
+
+.form__callback:before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../img/feedback/tel.png") no-repeat center;
+}
+
+.form__text {
+  display: inline-block;
+  margin-left: 22px;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.form-tel {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
