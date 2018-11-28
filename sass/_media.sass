@@ -1,6 +1,29 @@
 @media (max-width: 1199px)
   .container
     width: 970px
+  .modal
+    &__close
+      position: absolute
+      top: 7px
+      right: 7px
+    &__dialog
+      display: flex
+      max-width: 90%
+      max-height: 90%
+    &__info
+      display: flex
+      padding: 20px 20px
+      background-color: #f7f7f7
+    &__form
+      padding: 20px 20px
+      &-input
+        width: 300px
+        margin-bottom: 15px
+      &-button
+        padding: 28px 86px
+        font-size: 16px
+        +bold
+        margin-bottom: 33px
 
 @media (max-width: 992px)
   .container
@@ -12,6 +35,36 @@
         line-height: 36px
   .feedback
     background: #fff
+  .modal
+    &__dialog
+      display: flex
+      max-width: 80%
+      max-height: 80%
+    &__info
+      display: flex
+      padding: 20px 20px
+      background-color: #f7f7f7
+    &__price
+      margin-bottom: 15px
+      &:nth-child(3)
+        margin-bottom: 15px
+      &-img
+        margin-right: 10px
+      &-text
+        font-size: 12px
+        max-width: 150px
+        &-name 
+          font-size: 14px
+    &__form
+      padding: 20px 20px
+      &-input
+        width: 250px
+        margin-bottom: 15px
+      &-button
+        padding: 28px 60px
+        font-size: 16px
+        +bold
+        margin-bottom: 33px
 
 @media (max-width: 768px)
   .hidden-xs
@@ -42,6 +95,75 @@
     &__manager
       margin-right: 0
       max-width: 200px
+    
+  .modal
+    width: 100%
+    max-height: 100%
+    &__dialog
+      display: flex
+      flex-direction: column
+      max-width: 80%
+      max-height: 95%
+    &__info
+      display: flex
+      flex-direction: row
+      padding: 20px 20px
+      background-color: #f7f7f7
+    &__wrap
+      display: flex
+      flex-direction: column
+    &__price
+      &-text
+        display: block
+      &-img
+       margin-right: 5px
+       img
+         max-width: 108px
+    &__advantage
+      max-width: 200px
+      &-title 
+        font-size: 14px
+        +bold
+      ul 
+        margin: 0
+        font-size: 13px
+        padding-inline-start: 0
+        list-style: none
+        li
+          line-height: 20px
+          &:before
+            content: ''
+            display: inline-block
+            margin-right: 14px
+            width: 7px
+            height: 7px
+            border-radius: 4px
+            background-color: #ffd200
+    &__form
+      padding: 20px 20px
+      &-title
+        margin-bottom: 15px
+        max-width: 300px
+        font-size: 18px
+        +bold
+      &-subtitle
+        font-size: 13px
+        margin-bottom: 8px
+      &-input
+        font-size: 13px
+        padding: 15px
+        width: 250px
+        margin-bottom: 5px
+        &:last-of-type
+          margin-bottom: 10px
+      &-button
+        padding: 20px 60px
+        font-size: 13px
+        +bold
+        margin-bottom: 5px
+      &-tel
+        margin-top: 0px
+        font-size: 16px
 
 @media (max-width: 576px)
   .hidden-sm
@@ -91,6 +213,94 @@
       margin: auto
     &__text
       margin-left: 2px
+  
+  .modal
+    width: 100%
+    max-height: 100%
+    &__dialog
+      display: flex
+      flex-direction: column
+      max-width: 80%
+      max-height: 95%
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 10px 10px
+      background-color: #f7f7f7
+    &__wrap
+      display: flex
+      flex-direction: column
+      
+    &__price
+      margin-bottom: 5px
+      &:nth-child(3)
+        margin-bottom: 10px
+      &-text
+        display: block
+        &-name 
+          font-size: 13px
+          font-family: 'Museo Sans Medium'
+          &:after
+            content: ''
+            display: block
+            margin-top: 0px
+            margin-bottom: 0px
+            border-bottom: 2px solid $primary-color
+            width: 42px
+      &-img
+        display: none
+        margin-right: 5px
+        img
+          display: none
+          max-width: 108px
+    &__advantage
+      max-width: 200px
+      &-title 
+        font-size: 13px
+        +bold
+      ul 
+        margin: 0
+        font-size: 12px
+        padding-inline-start: 0
+        list-style: none
+        li
+          line-height: 14px
+          &:before
+            content: ''
+            display: inline-block
+            margin-right: 14px
+            width: 7px
+            height: 7px
+            border-radius: 4px
+            background-color: #ffd200
+    &__form
+      padding: 10px 10px
+      &-title
+        margin-bottom: 4px
+        max-width: 300px
+        font-size: 13px
+        +bold
+      &-subtitle
+        font-size: 13px
+        margin-bottom: 8px
+      &-input
+        font-size: 13px
+        padding: 10px
+        width: 250px
+        margin-bottom: 5px
+        &:last-of-type
+          margin-bottom: 10px
+      &-button
+        padding: 10px 60px
+        font-size: 13px
+        +bold
+        margin-bottom: 5px
+      &-callback
+        font-size: 11px
+      &-tel
+        margin-top: 1px
+        font-size: 11px
 
     
       
