@@ -1,5 +1,4 @@
 @media (max-width: 1199px)
-  
   .container
     width: 970px
   .portfolio
@@ -35,6 +34,10 @@
         font-size: 16px
         +bold
         margin-bottom: 33px
+  .question
+    padding-right: 40px
+    &__form
+      margin-left: 40px
 
 @media (max-width: 992px)
   .container
@@ -81,6 +84,24 @@
         font-size: 16px
         +bold
         margin-bottom: 33px
+  .feedback-question
+    padding: 50px 0
+  .question
+    padding-right: 10px
+    &-title
+      max-width: 350px
+      margin-bottom: 50px
+      font-size: 20px
+      +bold
+      line-height: 33px
+    &-subtitle
+      font-size: 16px
+      margin-bottom: 60px
+    &-item
+        &__text
+          font-size: 15px
+    &__form
+      margin-left: 20px
 
 @media (max-width: 768px)
   .hidden-xs
@@ -122,6 +143,53 @@
     &__item
       img
         width: 60%
+
+  .feedback-question
+    padding: 40px 0
+    background: #ffffff
+    background-size: 50%
+    position: relative
+    z-index: 1
+    &:after
+      content: ''
+      display: block
+      left: 0
+      top: 0
+      width: 100%
+      height: 46%
+      background-color: #ffc000
+      position: absolute
+      z-index: -1
+  .question
+    padding: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 50px
+    &__wrap
+      display: flex
+      flex-direction: column
+    &-wrap
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+    &-title
+      max-width: 450px
+      text-align: center
+      margin-bottom: 25px
+    &-subtitle
+      font-size: 16px
+      margin-bottom: 30px
+    &-item
+        &__text
+          max-width: 380px
+          font-size: 18px
+    &__form 
+      margin-left: 0
+      &-title
+        margin-bottom: 30px
+      
 
   .modal
     width: 100%
@@ -255,7 +323,53 @@
     width: 45px
     height: 19px
     bottom: -50px
-  
+
+  .feedback-question
+    padding: 30px 0
+    background: #ffffff
+    background-size: 50%
+    position: relative
+    z-index: 1
+    &:after
+      content: ''
+      display: block
+      left: 0
+      top: 0
+      width: 100%
+      height: 48%
+      background-color: #ffc000
+      position: absolute
+      z-index: -1
+  .question
+    &-title
+      font-size: 17px
+      max-width: 450px
+      text-align: center
+      margin-bottom: 25px
+    &-subtitle
+      font-size: 15px
+      margin-bottom: 30px
+    &-item
+      margin-left: 20px
+      &__text
+        max-width: 380px
+        font-size: 15px
+      &__img
+        margin-right: 20px
+        img
+          min-width: 32px
+          height: 32px
+    &__form 
+      margin-left: 0
+      &-title
+        margin-bottom: 20px
+        font-size: 17px
+      &-subtitle
+        font-size: 15px
+        margin-bottom: 35px
+      &-callback
+        font-size: 15px
+
   .modal
     width: 100%
     max-height: 100%
