@@ -1,6 +1,12 @@
 @media (max-width: 1199px)
   .container
     width: 970px
+  .main
+    &-img
+      max-width: 100%
+      transform-origin: none
+      transform: none
+      z-index: 2
   .portfolio
     background: $light-bg-color
     padding: 40px 0 140px
@@ -38,6 +44,15 @@
     padding-right: 40px
     &__form
       margin-left: 40px
+  .time
+    &__wrap-plan
+      margin: 0 auto 100px
+      max-width: 767px
+    &__plan
+      &:nth-child(3)
+        &:before
+          background-image: none
+  
 
 @media (max-width: 992px)
   .container
@@ -189,7 +204,39 @@
       margin-left: 0
       &-title
         margin-bottom: 30px
-      
+
+  .price
+    padding: 30px 40px
+    &-title
+      margin-bottom: 18px
+      font-size: 25px
+  .card
+    max-width: 300px
+    min-height: 380px
+    text-align: center
+    padding-bottom: 47px
+
+  .time
+    &__wrap-plan
+      max-width: 579px
+    &__plan
+      &:nth-child(2)
+        &:before
+          background-image: none
+      &:nth-child(4)
+        &:before
+          background-image: none
+      &:nth-child(3)
+        &:before
+          background-image: url("../img/time/arrow.png")
+    &__title
+      font-size: 25px
+    &__profit
+      padding: 30px 0 30px
+      &-text
+        max-width: 537px
+        font-size: 25px
+
 
   .modal
     width: 100%
@@ -369,6 +416,49 @@
         margin-bottom: 35px
       &-callback
         font-size: 15px
+  
+  .price
+    padding: 30px 0 40px
+    &-title
+      max-width: 330px
+      font-size: 20px
+      line-height: 30px
+      margin-bottom: 15px
+    &-subtitle
+      font-size: 17px
+      margin-bottom: 17px
+  .card
+    max-width: 280px
+    min-height: 320px
+    padding-bottom: 35px
+    &__img
+      &-wrap
+        position: relative
+        margin-bottom: 28px
+    &__title
+      margin-bottom: 26px
+
+  .time
+    &__wrap-plan
+      max-width: 400px
+    &__plan
+      &:before
+        background-image: none
+      &:nth-child(3)
+        &:before
+          background-image: none
+    &__title
+      line-height: 22px
+      margin-bottom: 17px
+      font-size: 18px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 15px
+    &__profit
+      padding: 30px 0 30px
+      &-text
+        max-width: 259px
+        font-size: 17px
 
   .modal
     width: 100%
