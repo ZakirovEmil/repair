@@ -411,7 +411,7 @@
         <form action="#" class="form3">
           <input type="text" required name="fio" class="input modal__form-input" placeholder="Ваше имя">
           <input type="tel" required name="phone" class="input modal__form-input" placeholder="Ваш телефон">
-          <button type="submit" class="button modal__form-button">
+          <button type="submit" class="button modal__form-button" id="button-form">
             Узнать стоимость
           </button>
         </form>
@@ -562,7 +562,10 @@
   <script>
     document.querySelector('#button-callback').addEventListener('click', function (){
       yaCounter51431974.reachGoal('btn'); return true;
-    })
+    }),
+    document.querySelector('#button-form').addEventListener('submit', function () {
+        yaCounter51431974.reachGoal('btn-form'); return true;
+      })
   </script>
 
   <script>
