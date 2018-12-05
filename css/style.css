@@ -994,7 +994,7 @@ template {
 
 .map {
   width: 54.27%;
-  height: 640px;
+  min-height: 640px;
 }
 
 .contacts {
@@ -1575,6 +1575,7 @@ img {
   }
   .map {
     width: 100%;
+    min-height: 450px;
     margin: 0 auto;
   }
   .contacts {
@@ -1932,6 +1933,9 @@ img {
   .time__profit-text {
     max-width: 259px;
     font-size: 17px;
+  }
+  .map {
+    min-height: 400px;
   }
   .contacts__title {
     font-size: 18px;

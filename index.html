@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ремонт Квартир</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<356c895d-f2fc-42fb-9db4-38ed8f24cbd6>&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slick.css">
@@ -299,9 +300,7 @@
   </section>
 
   <footer class="footer">
-    <div class="map">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af2941e0d4f73036b33a0ccdfce66b881d7c6a4d1ed2701c53b679b77aaf2eb18&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
-    </div>
+    <div class="map" id="map"></div>
     <div class="contacts">
       <div class="contacts__title">
         Приезжайте к нам в гости!
@@ -424,6 +423,46 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<356c895d-f2fc-42fb-9db4-38ed8f24cbd6>&lang=ru_RU" type="text/javascript"></script>
+  <script>
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init() {
+      // Создание карты.    
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.61140907, 37.20112250],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16
+      });
+      myPlacemarkWithContent = new ymaps.Placemark([55.61140907, 37.20112250], {
+            hintContent: 'Ремонт квартир',
+            balloonContent: 'Ремонт квартир',
+            iconContent: '12'
+        },
+        {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/footer/pin (1).png',
+          // Размеры метки.
+          iconImageSize: [64, 64],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-33, -61]
+        }
+        );
+
+        myMap.geoObjects
+        .add(myPlacemarkWithContent);;
+    }
+  </script>
   <script>
     new WOW().init();
   </script>
