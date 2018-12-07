@@ -244,8 +244,8 @@
 
         <div class="profit__advantage-item">
           <div class="profit__advantage-item__text">
-            Поможем закупить все материалы
-            по оптовым ценам у проверенных поставщиков
+            Поможем закупить все материалы<br>
+            по оптовым ценам у проверенных <br>поставщиков
           </div>
           <div class="profit__advantage-item__img">
             <img src="img/profit/img-1.png" alt="">
@@ -254,8 +254,8 @@
 
         <div class="profit__advantage-item">
           <div class="profit__advantage-item__text">
-            Мы дадим Вам максимальные скидки
-            у наших партнеров для закупки материалов оптом
+            Мы дадим Вам <span>максимальные скидки</span><br>
+            у наших партнеров для закупки <br>материалов оптом
           </div>
           <div class="profit__advantage-item__img">
             <img src="img/profit/img-2.png" alt="">
@@ -264,9 +264,9 @@
 
         <div class="profit__advantage-item">
           <div class="profit__advantage-item__text">
-            Все, что не сможете найти в городе -
-            поможем заказать у проверенных
-            поставщиков
+            Все, что не сможете найти в городе -<br>
+            поможем заказать у <span>проверенных<br>
+            поставщиков</span>
           </div>
           <div class="profit__advantage-item__img">
             <img src="img/profit/img-3.png" alt="">
@@ -496,11 +496,14 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=356c895d-f2fc-42fb-9db4-38ed8f24cbd6&lang=ru_RU">
   </script>
   <script>
+      //отключаем зум колёсиком мышки
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
     function init() {
-      // Создание карты.    
+      // Создание карты.
+      //отключаем зум колёсиком мышки
+
       var myMap = new ymaps.Map("map", {
         // Координаты центра карты.
         // Порядок по умолчанию: «широта, долгота».
@@ -529,9 +532,16 @@
           iconImageOffset: [-33, -61]
         }
         );
-
         myMap.geoObjects
-        .add(myPlacemarkWithContent);;
+        .add(myPlacemarkWithContent);
+      //отключаем зум колёсиком мышки
+      myMap.behaviors.disable('scrollZoom');
+
+      //на мобильных устройствах... (проверяем по userAgent браузера)
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //... отключаем перетаскивание карты
+        myMap.behaviors.disable('drag');
+      }
     }
   </script>
   <script>

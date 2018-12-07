@@ -1016,9 +1016,12 @@ template {
 
 .profit__advantage-item__text {
   margin: 27px 26px;
-  max-width: 282px;
   font-size: 16px;
   line-height: 23px;
+}
+
+.profit__advantage-item__text span {
+  font-family: 'Museo Sans Bold', sans-serif;
 }
 
 .profit__advantage-item__img {
@@ -1462,6 +1465,16 @@ img {
   }
   .feedback {
     background: #fff;
+    padding: 25px 0;
+  }
+  .form {
+    margin: 0 auto;
+  }
+  .form__title {
+    text-align: center;
+  }
+  .form__subtitle {
+    text-align: center;
   }
   .portfolio {
     padding: 30px 0 130px;
@@ -1987,7 +2000,7 @@ img {
     min-width: 170px;
   }
   .profit__advantage-item__text {
-    font-size: 16px;
+    font-size: 14px;
     margin: 12px 13px;
   }
   .guarantee {
